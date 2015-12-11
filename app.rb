@@ -35,15 +35,9 @@ class Unboxed < Sinatra::Base
         end
       end
     end
-
-    # language.to_s
-
+    
     puts language_obj
-    #
-    # repos.each do |repo|
-    #   repo_name = repo.name
-    #   repo_langs = octokit_client.languages("#{github_user.login}/#{repo_name}")
-    # end
+
     erb :user
   end
 
