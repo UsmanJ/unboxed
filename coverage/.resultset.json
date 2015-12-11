@@ -7,7 +7,7 @@
         1,
         null,
         1,
-        1,
+        2,
         null,
         null,
         1,
@@ -15,7 +15,13 @@
       ],
       "/Users/UsmaanJ/Desktop/Projects/unboxed/spec/features/username_spec.rb": [
         1,
+        1,
+        1,
+        1,
         null,
+        null,
+        1,
+        1,
         1,
         1,
         1,
@@ -23,6 +29,6 @@
         null
       ]
     },
-    "timestamp": 1449666460
+    "timestamp": 1449826850
   }
 }
