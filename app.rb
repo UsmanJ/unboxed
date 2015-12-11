@@ -1,8 +1,5 @@
 require 'sinatra/base'
 require 'octokit'
-require 'rest-client'
-require 'json'
-require 'github_api'
 
 class Unboxed < Sinatra::Base
 
@@ -35,7 +32,7 @@ class Unboxed < Sinatra::Base
         end
       end
     end
-    
+
     puts language_obj
 
     erb :user
