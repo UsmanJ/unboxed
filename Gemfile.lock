@@ -166,11 +166,9 @@ DEPENDENCIES
   coveralls
   cucumber
   guard
-  json
   launchy
   octokit
   rack
-  rest-client
   rspec
   rubocop
   rubocop-rspec

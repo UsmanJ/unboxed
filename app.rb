@@ -4,23 +4,19 @@ require 'octokit'
 class Unboxed < Sinatra::Base
 
   get '/' do
-
     erb :index
   end
 
   post '/' do
-    @username = params[:username]
-    @username.to_s
-    p @username
+    $username = params[:username]
     redirect to('/user')
   end
 
   get '/user' do
-    user = Octokit.user 'usmanj'
-    puts user.name
-    puts user.rels[:repos].href
-    repos = user.rels[:repos].get.data
-    puts repos.first.language
+    @user = Octokit.user($username)
+    repos = @user.rels[:repos].get.data
+
+    puts @user.name
 
     language_obj = {}
     repos.each do |repo|
