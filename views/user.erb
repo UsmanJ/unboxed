@@ -1,3 +1,22 @@
-<p> You searched for the user <%= @user.name %>.</p>
+<html>
+  <head>
+  </head>
+  <body>
+    <% if @top_lang == nil %>
+      <p> This user does not have any repos. Please try again.</p>
+      <p> Enter a github username:</p>
+      <form action="/" method="post">
+        Username <input type="text" name="username">
+        <input type="submit" value="Submit">
+      </form>
+    <% else %>
+      <p> You searched for the user <%= @user.name %>.</p>
 
-<p>This user's most used language on GitHub is: <%= @top_lang[0] %> </p>
+      <p>This user's most used language on GitHub is: <%= @top_lang[0] %> </p>
+
+      <form action="/">
+          <input type="submit" value="Home">
+      </form>
+    <% end %>
+  </body>
+</html>
