@@ -16,21 +16,16 @@ class Unboxed < Sinatra::Base
     @user = Octokit.user($username)
     repos = @user.rels[:repos].get.data
 
-    puts @user.name
-
-    language_obj = {}
+    @language_obj = {}
     repos.each do |repo|
       if repo.language
-        if !language_obj[repo.language]
-          language_obj[repo.language] = 1
+        if !@language_obj[repo.language]
+          @language_obj[repo.language] = 1
         else
-          language_obj[repo.language] += 1
+          @language_obj[repo.language] += 1
         end
       end
     end
-
-    puts language_obj
-
     erb :user
   end
 
