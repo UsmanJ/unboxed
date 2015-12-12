@@ -8,6 +8,6 @@ feature 'Username' do
     visit '/'
     fill_in :username, with: 'UsmanJ'
     click_button 'Submit'
-    expect(page).to have_content 'language'
+    expect(page).to have_content 'Usman Jamil'
   end
 end

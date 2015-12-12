@@ -26,6 +26,8 @@ class Unboxed < Sinatra::Base
         end
       end
     end
+
+    @top_lang = @language_obj.max_by{|k,v| v}
     erb :user
   end
 
